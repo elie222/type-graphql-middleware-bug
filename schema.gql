@@ -3,39 +3,13 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
-input AdminCreateUserInput {
-  username: String!
-  email: String!
-  password: String!
-  firstName: String!
-  lastName: String!
-  phone: String
-  auditor: Boolean = false
-  roles: [String!] = ["read_only"]
-}
-
-input CreateSegmentInput {
-  name: String!
-  parentSegmentId: String
-}
-
 """
 The javascript `Date` as string. Type represents date and time as the ISO Date string.
 """
 scalar DateTime
 
-type Mutation {
-  createSegment(data: CreateSegmentInput!): SegmentSchema!
-  updateSegment(data: UpdateSegmentInput!, _id: String!): SegmentSchema!
-  deleteSegment(_id: String!): Boolean!
-  createUser(user: AdminCreateUserInput!): ID!
-  adminCreateUser(user: AdminCreateUserInput!): UserSchema!
-}
-
 type Query {
-  segment(_id: String!): SegmentSchema
   segments: [SegmentSchema!]!
-  users: [UserSchema!]!
 }
 
 type SegmentSchema {
@@ -44,16 +18,4 @@ type SegmentSchema {
   updatedAt: DateTime
   name: String!
   parentSegmentId: String
-}
-
-input UpdateSegmentInput {
-  name: String!
-  parentSegmentId: String
-}
-
-type UserSchema {
-  _id: ID!
-  username: String!
-  createdAt: Float!
-  updatedAt: Float
 }
