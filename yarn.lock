@@ -649,7 +649,7 @@
     "@types/mongodb" "*"
     "@types/node" "*"
 
-"@types/node@*", "@types/node@^11.9.4":
+"@types/node@*":
   version "11.12.0"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-11.12.0.tgz#ec5594728811dc2797e42396cfcdf786f2052c12"
   integrity sha512-Lg00egj78gM+4aE0Erw05cuDbvX9sLJbaaPwwRtdCdAMnIudqrQZ0oZX98Ek0yiSK/A2nubHgJfvII/rTT2Dwg==
@@ -658,6 +658,11 @@
   version "10.14.4"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.14.4.tgz#1c586b991457cbb58fef51bc4e0cfcfa347714b5"
   integrity sha512-DT25xX/YgyPKiHFOpNuANIQIVvYEwCWXgK2jYYwqgaMrYE6+tq+DtmMwlD3drl6DJbUwtlIDnn0d7tIn/EbXBg==
+
+"@types/node@^11.11.0":
+  version "11.13.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.13.2.tgz#dc85dde46aa8740bb4aed54b8104250f8f849503"
+  integrity sha512-HOtU5KqROKT7qX/itKHuTtt5fV0iXbheQvrgbLNXFJQBY/eh+VS5vmmTAVlo3qIGMsypm0G4N1t2AXjy1ZicaQ==
 
 "@types/node@^8.0.29":
   version "8.10.45"
@@ -6356,13 +6361,13 @@ type-check@~0.3.2:
   dependencies:
     prelude-ls "~1.1.2"
 
-type-graphql@^0.17.0:
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/type-graphql/-/type-graphql-0.17.0.tgz#7a9b1cd91f84064b8150dacbbb232d2dbdbdcba2"
-  integrity sha512-eUPH8l5bjR7dSs09mEmRHY4aoMint8PiT0WAZDmDgbqd9fsaoMh6OvHHv92vDOzHf2L91pjUbMyrEb8ejceMpg==
+type-graphql@0.17.1:
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/type-graphql/-/type-graphql-0.17.1.tgz#bb2658b15f96c3993f367c1f3c8ab92484abcfcd"
+  integrity sha512-IsO+mitgBgkAfD/S0zD0xdDeVZ3FI1I3ihyMEFaL//VHEn2WG+/PMmNlfNva/TGneTXrN7NpgR0941Ov51hppQ==
   dependencies:
     "@types/glob" "^7.1.1"
-    "@types/node" "^11.9.4"
+    "@types/node" "^11.11.0"
     "@types/semver" "^5.5.0"
     class-validator ">=0.9.1"
     glob "^7.1.3"
