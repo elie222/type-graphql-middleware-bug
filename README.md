@@ -6,7 +6,6 @@ Run:
 
 ```sh
 yarn
-sudo mongod # or however you start mongo on your machine
 yarn watch
 ```
 

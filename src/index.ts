@@ -2,7 +2,6 @@ import "reflect-metadata";
 import { ApolloServer } from "apollo-server";
 import { buildSchema } from "type-graphql";
 import { Container } from "typedi";
-import { mergeSchemas } from "graphql-toolkit";
 import SegmentResolver from "./modules/segment/graphql/SegmentResolver";
 
 // middleware
@@ -35,9 +34,7 @@ buildSchema({
   globalMiddlewares: [LogAccess, ResolveTime]
 }).then(typeGraphqlSchema => {
   const server = new ApolloServer({
-    schema: mergeSchemas({
-      schemas: [typeGraphqlSchema]
-    }),
+    schema: typeGraphqlSchema,
     formatError: error => {
       console.error(error);
       return error;
